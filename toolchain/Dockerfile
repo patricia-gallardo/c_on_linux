@@ -19,10 +19,6 @@ RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/
 
 RUN sed -i 's/UsePAM yes/#UsePAM yes/' /etc/ssh/sshd_config
 
-ENV NOTVISIBLE "in users profile"
-
-RUN echo "export VISIBLE=now" >> /etc/profile
-
 # Declare the port number the container should expose
 EXPOSE 2222
 
