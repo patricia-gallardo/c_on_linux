@@ -8,6 +8,7 @@ RUN apt-get install -y clang
 RUN apt-get install -y gdb
 RUN apt-get install -y build-essential
 RUN apt-get install -y openssh-server
+RUN apt-get install -y rsync
 
 RUN mkdir /var/run/sshd
 
@@ -30,7 +31,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 # HOW TO TEST:
 # docker build -t toolchain .
 # docker run -d -p 2222:22 --name test_toolchain toolchain
-# docker port test_toolchain
+# (docker port test_toolchain)
 # ssh root@localhost -p 2222
 # Password is the one you set above (colinux)
 
