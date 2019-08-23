@@ -74,7 +74,6 @@ Vagrant.configure("2") do |config|
      apt-get install -y rsync
      apt-get install -y virtualbox-guest-dkms
      apt-get install -y virtualbox-guest-utils
-     apt-get install -y ubuntu-session
      apt-get install -y ubuntu-gnome-desktop
    SHELL
 end
@@ -102,3 +101,6 @@ end
 # CLEANUP
 # vagrant halt
 # vagrant destroy
+
+# TROUBLE SHOOT
+# vagrant provision
