@@ -86,7 +86,7 @@ end
 # 3. (Windows) Install Git Bash
 #    https://git-scm.com/downloads
 
-# BRING UP
+# BRING UP IN GIT BASH
 # cd
 # mkdir -p vagrant/ubuntu-bionic
 # cd vagrant/ubuntu-bionic
@@ -102,5 +102,5 @@ end
 # vagrant halt
 # vagrant destroy
 
-# TROUBLE SHOOT
+# TROUBLESHOOT
 # vagrant provision
