@@ -104,3 +104,6 @@ end
 
 # TROUBLESHOOT
 # vagrant provision
+
+# RESIZE WINDOW
+# View > Auto-resize Guest Display
