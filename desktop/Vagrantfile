@@ -95,3 +95,7 @@ end
 # sudo adduser <username>
 # vagrant halt
 # vagrant up
+
+# CLEANUP
+# vagrant halt
+# vagrant destroy
