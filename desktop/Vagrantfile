@@ -74,6 +74,24 @@ Vagrant.configure("2") do |config|
      apt-get install -y rsync
      apt-get install -y virtualbox-guest-dkms
      apt-get install -y virtualbox-guest-utils
+     apt-get install -y ubuntu-session
      apt-get install -y ubuntu-gnome-desktop
    SHELL
 end
+
+# PREPARATION
+# 1. Install VirtualBox
+# 2. Install Vagrant
+# 3. (Windows) Install Git Bash
+
+# BRING UP
+# cd
+# mkdir -p vagrant/ubuntu-bionic
+# cd vagrant/ubuntu-bionic
+# vagrant init ubuntu/bionic64
+# curl https://raw.githubusercontent.com/patricia-gallardo/c_on_linux/master/desktop/Vagrantfile -O
+# vagrant up
+# vagrant ssh
+# sudo adduser <username>
+# vagrant halt
+# vagrant up
