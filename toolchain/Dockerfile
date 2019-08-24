@@ -24,6 +24,12 @@ EXPOSE 2222
 
 CMD ["/usr/sbin/sshd", "-D"]
 
+# PREPARATION
+# 1. (Mac) Install Docker Desktop for Mac (This probably requires a docker hub account)
+#    https://hub.docker.com/editions/community/docker-ce-desktop-mac
+# 2. Install CLion from Jetbrains
+#    https://www.jetbrains.com/clion/download/
+
 # HOW TO TEST:
 # docker build -t toolchain .
 # docker run -d -p 2222:22 --name test_toolchain toolchain
