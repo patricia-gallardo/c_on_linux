@@ -86,6 +86,10 @@ end
 # 3. (Windows) Install Git Bash
 #    https://git-scm.com/downloads
 
+# CERT ISSUES ON MAC
+# Try to install, get the error, then
+# System Preferences > Security & Privacy > Open Anyway
+
 # BRING UP IN GIT BASH
 # cd
 # mkdir -p vagrant/ubuntu-bionic
