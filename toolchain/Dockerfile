@@ -30,6 +30,11 @@ CMD ["/usr/sbin/sshd", "-D"]
 # 2. Install CLion from Jetbrains
 #    https://www.jetbrains.com/clion/download/
 
+# MAC GIT NOTES
+# Install xcode - Apple Store
+# sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+# (Commandline tools) sudo xcode-select --install
+
 # HOW TO TEST:
 # docker build -t toolchain .
 # docker run -d -p 2222:22 --name test_toolchain toolchain
