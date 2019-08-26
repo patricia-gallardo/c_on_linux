@@ -88,7 +88,7 @@ end
 
 # CERT ISSUES ON MAC
 # Try to install, get the error, then
-# System Preferences > Security & Privacy > Open Anyway
+# System Preferences > Security & Privacy > General > Open Anyway
 
 # BRING UP IN GIT BASH
 # cd
