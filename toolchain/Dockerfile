@@ -40,7 +40,7 @@ CMD ["/usr/sbin/sshd", "-D"]
 # docker run -d -p 2222:22 --name test_toolchain toolchain
 # (docker port test_toolchain)
 # ssh root@localhost -p 2222
-# Password is the one you set above (colinux)
+# Password is the one you set above (conlinux)
 
 # HOW TO CLEAN UP:
 # docker container stop test_toolchain
