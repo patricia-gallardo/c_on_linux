@@ -90,16 +90,40 @@ end
 # Try to install, get the error, then
 # System Preferences > Security & Privacy > General > Open Anyway
 
-# BRING UP IN GIT BASH
+# INSTALLATION IN A SHELL
+# Doc # Go to your user folder
 # cd
+
+# Doc # Make the directories where we will control our Ubuntu VM
 # mkdir -p vagrant/ubuntu-bionic
+
+# Doc # Go into the directory
 # cd vagrant/ubuntu-bionic
+
+# Doc # Init the VM with the Ubuntu 18.04 image
 # vagrant init ubuntu/bionic64
+
+# Doc # Download our custom Vagrantfile (this file)
 # curl https://raw.githubusercontent.com/patricia-gallardo/c_on_linux/master/desktop/Vagrantfile -O
+
+# Doc # Start up the VM
 # vagrant up
+
+# Doc # Log you into the VM using the vagrant user
 # vagrant ssh
+
+# Doc # Now we need to make a new user for you
 # sudo adduser <username>
+# Doc # Chose a password and just enter through the rest.
+
+# Doc # Add the user to the sudoers - so that it can do sudo <command>
+sudo adduser <username> sudo
+# Doc # Exit the vagrant ssh using Ctrl+D
+
+# Doc # Now we shut down the VM to make the changes take effect
 # vagrant halt
+
+# Doc # And boot up again, now with a GUI and log in with our user
 # vagrant up
 
 # CLEANUP
@@ -108,6 +132,10 @@ end
 
 # TROUBLESHOOT
 # vagrant provision
+
+# NORMAL USE
+# vagrant up
+# vagrant halt
 
 # RESIZE WINDOW
 # View > Auto-resize Guest Display
