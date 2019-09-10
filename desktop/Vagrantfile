@@ -117,7 +117,7 @@ end
 # Doc # Chose a password and just enter through the rest.
 
 # Doc # Add the user to the sudoers - so that it can do sudo <command>
-sudo adduser <username> sudo
+# sudo adduser <username> sudo
 # Doc # Exit the vagrant ssh using Ctrl+D
 
 # Doc # Now we shut down the VM to make the changes take effect
