@@ -1,23 +1,30 @@
 FROM ubuntu:18.04
 
-RUN apt-get update
-RUN apt-get -y upgrade
-RUN apt-get install -y cmake
-RUN apt-get install -y gcc
-RUN apt-get install -y clang
-RUN apt-get install -y gdb
-RUN apt-get install -y build-essential
-RUN apt-get install -y openssh-server
-RUN apt-get install -y rsync
-
-RUN mkdir /var/run/sshd
-
-# Set password to conlinux
-RUN echo 'root:conlinux' | chpasswd
-
-RUN sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-
-RUN sed -i 's/UsePAM yes/#UsePAM yes/' /etc/ssh/sshd_config
+RUN echo "Updating repositories and installing required tools" \
+    && export DEBIAN_FRONTEND="noninteractive" \
+    && apt-get update \
+    && apt-get -y dist-upgrade \
+    && apt-get -y install \
+       cmake \
+       gcc \
+       clang \
+       gdb \
+       build-essential \
+       openssh-server \
+       rsync \
+    && echo "Cleaning system" \
+    && apt-get autoclean \
+    && apt-get clean \
+    && apt-get autoremove --purge \
+    && rm -rf /var/apt/cache/* \
+    && rm -rf /tmp/*
+       
+RUN echo "Setting sshd configuration" \
+    && mkdir -p /var/run/sshd \
+    # Set password to conlinux
+    && echo 'root:conlinux' | chpasswd \
+    && sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
+    && sed -i 's/UsePAM yes/#UsePAM yes/' /etc/ssh/sshd_config
 
 # Declare the port number the container should expose
 EXPOSE 2222
